@@ -1,0 +1,47 @@
+{
+  "name": "elysia-local-model",
+  "version": "0.1.0",
+  "description": "An Elysia plugin for local in-app Hugging Face transformer models.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json --emitDeclarationOnly --outDir dist && bun build ./src/index.ts --outdir dist --target node --packages external",
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.3.0",
+    "onnxruntime-node": "^1.24.3"
+  },
+  "peerDependencies": {
+    "@huggingface/tokenizers": ">=0.2.0",
+    "elysia": ">=2.0.0-beta.0"
+  },
+  "peerDependenciesMeta": {
+    "@huggingface/tokenizers": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.3",
+    "@types/node": "^26.6.4",
+    "elysia": "2.0.0-beta.31",
+    "typescript": "^5.9.3"
+  },
+  "trustedDependencies": [
+    "onnxruntime-node",
+    "protobufjs"
+  ]
+}
