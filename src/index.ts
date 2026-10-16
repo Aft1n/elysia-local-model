@@ -3,7 +3,6 @@ import type { LocalModelConfig, LocalModelPipeline } from "./types"
 import { loadLocalModel } from "./local-model"
 import {
   getDecisionModel,
-  resetDecisionModelCache,
   type DecisionModelOverrides,
   type ServerDecisionModel,
 } from "./decision-model"

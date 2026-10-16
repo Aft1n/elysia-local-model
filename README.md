@@ -1,4 +1,4 @@
-# elysia-local-model
+# elysia-local-model [![npm version][npm-version-src]][npm-version-href]
 
 An [Elysia](https://elysiajs.com) v2 plugin for running local Hugging Face transformer models in-process on CPU via [Transformers.js](https://huggingface.co/docs/transformers.js). Server-side sibling of [nuxt-local-model](https://github.com/Aft1n/nuxt-local-model).
 
@@ -88,3 +88,6 @@ const app = new Elysia()
 ## License
 
 MIT
+
+[npm-version-src]: https://img.shields.io/npm/v/elysia-local-model?style=flat-square
+[npm-version-href]: https://www.npmjs.com/package/elysia-local-model

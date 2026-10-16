@@ -68,7 +68,7 @@ export function resolveModelDefinition(
     task: registryEntry.task || config.defaultTask,
     model: registryEntry.model || name,
     options: {
-      ...(registryEntry.options || {}),
+      ...registryEntry.options,
       ...loadOptions,
     },
   }
